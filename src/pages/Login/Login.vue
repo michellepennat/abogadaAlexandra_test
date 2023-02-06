@@ -4,18 +4,12 @@
     <h1>Iniciar sesión</h1>
     <v-form>
       <v-container>
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12">
             <v-text-field
+              class="input"
               label="Usuario"
               placeholder="user@example.com"
-            ></v-text-field>
-          </v-col>
-
-          <v-col cols="12">
-            <v-text-field
-              label="Contraseña"
-              placeholder="**********"
             ></v-text-field>
           </v-col>
           <v-col cols="12">

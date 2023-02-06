@@ -1,20 +1,38 @@
 h1 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 900;
   text-align: center;
   padding-block: 32px;
   color: $dark-blue;
 }
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: $dark-blue;
+}
 
-.v-field__field {
-  border: 1px solid $dark-blue;
-  background: $ligth;
-  border-radius: 5px;
+.input {
+  .v-field__field {
+    border: 1px solid $dark-blue;
+    background: $light;
+    border-radius: 5px;
+  }
+}
+
+.select {
+  .v-input__control {
+    border: 1px solid $dark-blue;
+    border-radius: 5px;
+  }
+  .v-field--variant-filled .v-field__overlay {
+    background: $light;
+  }
 }
 
 .btn-primary {
   background-color: $bright-blue;
-  color: $ligth;
+  color: $light;
   text-transform: capitalize;
 }
 

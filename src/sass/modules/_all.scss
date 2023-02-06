@@ -1,3 +1,4 @@
-@import '../../pages/Login/Login.scss',
-  '../../pages/Conversion/Conversion.scss',
-  '../../pages/Comparison/Comparison.scss';
+@import "../../pages/Login/Login.scss";
+
+@import "../../components/organisms/Comparison/Comparison.scss",
+  "../../components/organisms/Conversion/Conversion.scss";

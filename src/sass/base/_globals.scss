@@ -15,5 +15,26 @@ h1 {
 .btn-primary {
   background-color: $bright-blue;
   color: $ligth;
-  height: 32px;
+  text-transform: capitalize;
+}
+
+main {
+  display: flex;
+}
+
+@media (min-width: 680px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .btn-primary {
+    font-size: 24px;
+  }
+
+  main {
+    background-color: $pale-blue;
+    background-image: url(@/assets/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    overflow: hidden;
+  }
 }

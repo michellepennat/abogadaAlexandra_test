@@ -1,0 +1,19 @@
+h1 {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  padding-block: 32px;
+  color: $dark-blue;
+}
+
+.v-field__field {
+  border: 1px solid $dark-blue;
+  background: $ligth;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: $bright-blue;
+  color: $ligth;
+  height: 32px;
+}

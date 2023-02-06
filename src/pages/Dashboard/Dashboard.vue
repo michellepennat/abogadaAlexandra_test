@@ -1,47 +1,41 @@
 <template>
-  <v-card>
-    <v-tabs
-      v-model="tab"
-      background-color="deep-purple accent-4"
-      centered
-      dark
-      icons-and-text
-    >
+  <v-card class="dashboard">
+    <v-tabs v-model="tab" centered dark icons-and-text>
       <v-tabs-slider></v-tabs-slider>
-
       <v-tab href="#tab-1">
-        Recents
-        <v-icon>mdi-phone</v-icon>
+        Conversión
+        <v-icon>mdi-cash</v-icon>
       </v-tab>
-
       <v-tab href="#tab-2">
-        Favorites
-        <v-icon>mdi-heart</v-icon>
-      </v-tab>
-
-      <v-tab href="#tab-3">
-        Nearby
-        <v-icon>mdi-account-box</v-icon>
+        Comparación
+        <v-icon>mdi-cash-multiple</v-icon>
       </v-tab>
     </v-tabs>
-
     <v-tabs-items v-model="tab">
-      <v-tab-item v-for="i in 3" :key="i" :value="'tab-' + i">
+      <v-tab-item value="tab-1">
         <v-card flat>
-          <v-card-text>{{ text }}</v-card-text>
+          <Conversion />
+        </v-card>
+      </v-tab-item>
+      <v-tab-item value="tab-2">
+        <v-card flat>
+          <Comparison />
         </v-card>
       </v-tab-item>
     </v-tabs-items>
   </v-card>
 </template>
 <script>
+import Conversion from "../../components/organisms/Conversion.vue";
+import Comparison from "../../components/organisms/Comparison.vue";
+
 export default {
   name: "dashboarPage",
   data() {
     return {
       tab: null,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
   },
+  components: { Comparison, Conversion },
 };
 </script>

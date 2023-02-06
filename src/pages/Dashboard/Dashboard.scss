@@ -1,0 +1,10 @@
+.dashboard {
+  width: 100%;
+  @media (min-width: 680px) {
+    width: 500px;
+    margin: auto;
+    align-self: center;
+    box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+}

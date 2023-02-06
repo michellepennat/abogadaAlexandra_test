@@ -18,8 +18,17 @@
               placeholder="**********"
             ></v-text-field>
           </v-col>
+          <v-col cols="12">
+            <v-btn
+              width="100%"
+              height="56px"
+              class="btn-primary"
+              depressed
+              elevation="2"
+              >Ingresar</v-btn
+            >
+          </v-col>
         </v-row>
-        <v-btn width="100%" height="56px" class="btn-primary" depressed elevation="2">Ingresar</v-btn>
       </v-container>
     </v-form>
   </v-container>

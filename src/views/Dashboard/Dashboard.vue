@@ -1,5 +1,6 @@
 <template>
   <v-card class="dashboard">
+    <v-btn @click="logout"> Salir </v-btn>
     <v-tabs v-model="tab" centered dark icons-and-text>
       <v-tabs-slider></v-tabs-slider>
       <v-tab href="#tab-1">
@@ -28,6 +29,7 @@
 <script>
 import Conversion from "../../components/organisms/Conversion.vue";
 import Comparison from "../../components/organisms/Comparison.vue";
+import router from "../../router";
 
 export default {
   name: "dashboarPage",
@@ -37,5 +39,11 @@ export default {
     };
   },
   components: { Comparison, Conversion },
+  methods: {
+    logout() {
+      sessionStorage.removeItem("token");
+      router.push("/login");
+    },
+  },
 };
 </script>

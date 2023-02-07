@@ -49,12 +49,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    let dataUser = JSON.parse(window.localStorage.getItem("userContact"));
-    if (dataUser) {
-      this.emailPerson = dataUser.email;
-    }
-  },
   methods: {
     validate() {
       if (this.$refs.form.validate()) {

@@ -27,7 +27,7 @@ const actions = {
       })
       .then((response) => {
         if (response.accessToken) {
-          sessionStorage.setItem("token", response.accessToken);
+          localStorage.setItem("token", response.accessToken);
           commit("success", response);
           router.push("/");
         } else {

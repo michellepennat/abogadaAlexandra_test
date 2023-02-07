@@ -1,8 +1,6 @@
 <template>
   <v-card class="dashboard">
-    <v-btn @click="logout"> Salir </v-btn>
     <v-tabs v-model="tab" centered dark icons-and-text>
-      <v-tabs-slider></v-tabs-slider>
       <v-tab href="#tab-1">
         Conversión
         <v-icon>mdi-cash</v-icon>
@@ -13,12 +11,13 @@
       </v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
-      <v-tab-item value="tab-1">
+      <v-btn @click="logout"> Salir </v-btn>
+      <v-tab-item :key="1" value="tab-1">
         <v-card flat>
           <Conversion />
         </v-card>
       </v-tab-item>
-      <v-tab-item value="tab-2">
+      <v-tab-item key="2" value="tab-2">
         <v-card flat>
           <Comparison />
         </v-card>
@@ -35,13 +34,13 @@ export default {
   name: "dashboarPage",
   data() {
     return {
-      tab: null,
+      tab: "tab-1",
     };
   },
   components: { Comparison, Conversion },
   methods: {
     logout() {
-      sessionStorage.removeItem("token");
+      localStorage.removeItem("token");
       router.push("/login");
     },
   },

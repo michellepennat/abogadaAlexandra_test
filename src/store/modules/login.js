@@ -32,11 +32,13 @@ const actions = {
           router.push("/");
         } else {
           commit("error", true);
+          alert("Correo incorrecto");
         }
         commit("loading", false);
       })
       .catch((response) => {
         commit("error", response);
+        alert("Correo incorrecto");
         commit("loading", false);
       });
   },

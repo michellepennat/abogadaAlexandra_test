@@ -1,17 +1,17 @@
 import { createStore } from "vuex";
 import login from "./modules/login";
+import currency from "./modules/currency";
 
 const store = createStore({
   state() {
-    return {
-      a: "asdadasd",
-    };
+    return {};
   },
   getters: {},
   mutations: {},
   actions: {},
   modules: {
     login,
+    currency,
   },
 });
 
